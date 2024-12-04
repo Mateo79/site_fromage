@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="style.css">
+    <title id="page-title">Fromagerie de Saint-Marc</title>
+    <link rel="icon" href="img/fromage_logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="haut">
+        <header>
+            <div class="logo">
+                <img src="img/fromage_logo.png" alt="Logo" class="logo">
+            </div>
+            <a href="produit_locaux.html" id="link-local-products">Produits de notre région</a>
+            <a href="fromage.html" id="link-cheeses">Nos Fromages</a>
+        </header>
+        <main>
+            <div class="center">
+                <h1 id="main-title">Fromagerie de Saint-Marc</h1>
+                <p id="main-description">Depuis 2016, notre seul but est de vous faire découvrir 
+                ou de vous permettre de vous fournir un fromage au lait cru
+                de qualité. En tant que fromagers indépendants, nous nous
+                permettons de promouvoir les petits commerçants des environs.
+                Alors, n'hésitez pas à passer en magasin pour vous faire plaisir.</p>
+            </div>   
+        </main>
+    </div>
+    <div class="cadre">
+       <img src="img/fromage.png" alt="La fromagerie" title="La fromagerie">
+    </div>
+    <div class="horaires">
+        <h2 id="hours-title">Horaires et adresse</h2>
+        <p id="adresse">Situé au : 17 Rue Saint-Marc, 22300 Lannion, France</p>
+        <p id="horaires">Nous sommes ouverts du mardi au vendredi : 9h30/13h00-14h30/19h00. Le samedi, de 9h30 à 19h00 en continu.</p>
+        <button id="facebookButton" class="facebook-btn">
+            <i class="fab fa-facebook-f"></i> Venez nous voir sur Facebook
+        </button>
+        <button id="translateButton" class="translate-btn">Passer en anglais</button>
+    </div>
+    <footer id="footer">Nous vous remercions d'avance de votre passage en boutique</footer>
+    
+    <!-- Script JavaScript -->
+    <script>
+        const translations = {
+            fr: {
+                pageTitle: "Fromagerie de Saint-Marc",
+                linkLocalProducts: "Produits de notre région",
+                linkCheeses: "Nos Fromages",
+                mainTitle: "Fromagerie de Saint-Marc",
+                mainDescription: "Depuis 2016, notre seul but est de vous faire découvrir ou de vous permettre de vous fournir un fromage au lait cru de qualité. En tant que fromagers indépendants, nous nous permettons de promouvoir les petits commerçants des environs. Alors, n'hésitez pas à passer en magasin pour vous faire plaisir.",
+                hoursTitle: "Horaires et adresse",
+                adresse: "Situé au : 17 Rue Saint-Marc, 22300 Lannion, France",
+                horaires: "Nous sommes ouverts du mardi au vendredi : 9h30/13h00-14h30/19h00. Le samedi, de 9h30 à 19h00 en continu.",
+                footer: "Nous vous remercions d'avance de votre passage en boutique",
+                buttonFacebook: "Venez nous voir sur Facebook",
+                buttonTranslate: "Passer en anglais"
+            },
+            en: {
+                pageTitle: "Saint-Marc Cheese Shop",
+                linkLocalProducts: "Local Products",
+                linkCheeses: "Our Cheeses",
+                mainTitle: "Saint-Marc Cheese Shop",
+                mainDescription: "Since 2016, our sole purpose is to help you discover or provide you with high-quality raw milk cheese. As independent cheesemakers, we promote local small businesses. So, don't hesitate to visit our store to treat yourself.",
+                hoursTitle: "Opening Hours and Address",
+                adresse: "Located at: 17 Rue Saint-Marc, 22300 Lannion, France",
+                horaires: "We are open from Tuesday to Friday: 9:30 AM - 1:00 PM / 2:30 PM - 7:00 PM. On Saturday, from 9:30 AM to 7:00 PM non-stop.",
+                footer: "We thank you in advance for your visit to our store",
+                buttonFacebook: "Visit us on Facebook",
+                buttonTranslate: "Switch to French"
+            }
+        };
+
+        let currentLanguage = "fr";
+
+        document.getElementById("translateButton").addEventListener("click", function () {
+            currentLanguage = currentLanguage === "fr" ? "en" : "fr";
+            const langData = translations[currentLanguage];
+
+            document.title = langData.pageTitle;
+            document.getElementById("page-title").textContent = langData.pageTitle;
+            document.getElementById("link-local-products").textContent = langData.linkLocalProducts;
+            document.getElementById("link-cheeses").textContent = langData.linkCheeses;
+            document.getElementById("main-title").textContent = langData.mainTitle;
+            document.getElementById("main-description").textContent = langData.mainDescription;
+            document.getElementById("hours-title").textContent = langData.hoursTitle;
+            document.getElementById("adresse").textContent = langData.adresse;
+            document.getElementById("horaires").textContent = langData.horaires;
+            document.getElementById("footer").textContent = langData.footer;
+            document.getElementById("facebookButton").textContent = langData.buttonFacebook;
+            document.getElementById("translateButton").textContent = langData.buttonTranslate;
+        });
+
+        document.getElementById("facebookButton").addEventListener("click", function () {
+            window.open("https://www.facebook.com/votre-page-facebook", "_blank");
+        });
+    </script>
+</body>
+</html>

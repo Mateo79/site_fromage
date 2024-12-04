@@ -1,0 +1,172 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: black;
+    color: white;
+}
+
+/* Style pour le texte encadré */
+.encadre {
+    border: 2px solid #333;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: #000000;
+}
+
+.h1 {
+    color: rgb(210, 221, 49);
+}
+
+/* Style spécifique pour les sections avec images */
+.brebies, .molle, .fleurie, .charcuterie {
+    margin-bottom: 20px;
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.5em;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.haut {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.haut h1 {
+    color: rgb(210, 221, 49);
+}
+
+header {
+    width: 100%;
+    background-color: #5a5858;
+    padding: 10px 0;
+}
+
+header a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #f5f0f0;
+}
+
+footer {
+    background-color: #333; 
+    color: #e4e4e4;        
+    padding: 20px;          
+    text-align: center;     
+    position: relative;      
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Changer l'alignement des sections et les tailles des images sur des écrans plus petits */
+    .molle, .fleurie, .brebies, .charcuterie {
+        width: 100%;
+    }
+
+    .text-overlay {
+        font-size: 1.2em;
+        padding: 5px 10px;
+    }
+
+    header {
+        padding: 15px;
+    }
+
+    header a {
+        font-size: 0.9em;
+        margin: 0 10px;
+    }
+
+    footer {
+        padding: 10px;
+    }
+
+    /* Ajuster les titres */
+    .haut h1 {
+        font-size: 1.8em;
+    }
+
+    /* Modifier la taille des images */
+    .image {
+        border-radius: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Sur les très petits écrans, comme les téléphones, ajuster les polices et la mise en page */
+    body {
+        padding: 10px;
+    }
+
+    .text-overlay {
+        font-size: 1em;
+        padding: 5px;
+    }
+
+    .haut h1 {
+        font-size: 1.5em;
+    }
+
+    header a {
+        font-size: 0.8em;
+        margin: 0 8px;
+    }
+
+    footer {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+
+    /* Réduire la taille des images */
+    .image {
+        width: 90%;
+    }
+
+    .logo img {
+        width: 80%;
+    }
+
+    .molle, .fleurie, .brebies, .charcuterie {
+        padding: 0;
+    }
+}
+
+/* Bouton de traduction */
+#translateButton {
+    background-color: #4CAF50; 
+    color: white; 
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#translateButton:hover {
+    background-color: #45a049;
+}

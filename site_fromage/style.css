@@ -1,0 +1,131 @@
+/* Styles de base */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: black;
+}
+
+.haut {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+header {
+    width: 100%;
+    background-color: #5a5858;
+    padding: 10px 0;
+}
+
+header a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #c7c2c2;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.center {
+    max-width: 600px;
+}
+
+.cadre {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.horaires {
+    text-align: center;
+    padding: 20px;
+}
+
+.center h1 {
+    color: rgb(255, 206, 43); 
+    font-size: 36px; 
+}
+
+.facebook-btn, .translate-btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-right: 10px;
+    border: none;
+    color: white;
+}
+
+/* Bouton Facebook */
+.facebook-btn {
+    background-color: #3b5998; 
+}
+
+.facebook-btn:hover {
+    background-color: #2d4373; 
+}
+
+/* Bouton Traduction */
+.translate-btn {
+    background-color: #4CAF50; 
+}
+
+.translate-btn:hover {
+    background-color: #45a049; 
+}
+
+/* Texte de la section horaires */
+.horaires h2 {
+    color: rgb(214, 189, 45); 
+    font-size: 28px; 
+}
+
+.horaires p {
+    color: rgb(197, 195, 57); 
+    font-size: 16px; 
+}
+
+/* Logo */
+.logo {
+    position: absolute;
+    top: 5px; 
+    right: 5px; 
+    height: 140px;
+    width: auto; 
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;            
+    padding: 20px;        
+    text-align: center;    
+    position: relative;   
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .center h1 {
+        font-size: 28px;
+    }
+    .horaires h2 {
+        font-size: 22px;
+    }
+    .facebook-btn, .translate-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+    .logo {
+        height: 100px;
+    }
+}
